@@ -6,7 +6,7 @@
     "start": "gulp",
     "build": "gulp build"
   },
-  "dependencies": {
+  "devDependencies": {
     "angularfire": "^2.1.0",
     "firebase": "^3.6.0",
     "fireenjin": "github:madnesslabs/fireenjin",
