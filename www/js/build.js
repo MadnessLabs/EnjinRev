@@ -51768,6 +51768,7 @@ var EnjinRev;
             this.modal.show();
         };
         HomeController.prototype.broadcast = function (name, data) {
+            console.log('broadcasting...', name);
             ___browserSync___.socket.emit("enjin-" + name, data);
         };
         return HomeController;
