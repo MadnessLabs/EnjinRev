@@ -51743,12 +51743,38 @@ var EnjinRev;
 (function (EnjinRev) {
     'use strict';
     var HomeController = (function () {
-        function HomeController() {
-        }
-        HomeController.prototype.addPage = function (name) {
-            ___browserSync___.socket.emit('enjin-add-page', {
-                name: name
+        function HomeController($ionicModal, $scope) {
+            var _this = this;
+            this.$ionicModal = $ionicModal;
+            this.$scope = $scope;
+            this.$ionicModal.fromTemplateUrl('html/modal/add.html', {
+                scope: this.$scope,
+                animation: 'slide-in-up',
+                backdropClickToClose: true
+            }).then(function (modal) {
+                _this.modal = modal;
             });
+        }
+        HomeController.prototype.closeForm = function () {
+            this.modal.hide();
+        };
+        HomeController.prototype.add = function (type) {
+            var data = {};
+            if (type === 'Page') {
+                data = {
+                    name: this.addForm.name
+                };
+            }
+            this.broadcast('add-' + type.toLowerCase(), data);
+            this.closeForm();
+            this.addForm = {};
+        };
+        HomeController.prototype.openForm = function (type) {
+            this.type = type;
+            this.modal.show();
+        };
+        HomeController.prototype.broadcast = function (name, data) {
+            ___browserSync___.socket.emit("enjin-" + name, data);
         };
         return HomeController;
     }());

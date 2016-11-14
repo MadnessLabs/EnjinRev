@@ -10445,8 +10445,10 @@ body {
     width: 1500px; } }
 
 .page-home iframe {
-  width: 320px;
-  height: 640px;
+  width: 100%;
+  height: calc(100vh - 100px);
   display: block;
   margin: 0 auto; }
+
+
 

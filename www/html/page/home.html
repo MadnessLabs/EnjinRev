@@ -1,15 +1,35 @@
 
 <ion-view class="page-home" view-title="home">
   <ion-content>
+    <div class="row padding">
+      <div class="col-xs-4">
+        <h2>Madness Enjin Rev</h2>
+      </div>
+      <div class="col-xs-8">
+        <ion-item class="item-input icon-left"><i class="icon ion-search"></i>
+          <input type="text" ng-model="ctrl.currentUrl"/>
+        </ion-item>
+      </div>
+    </div>
     <div class="row">
-      <div class="col-4">
+      <div class="col-xs-4">
+        <h3>Add</h3>
         <div class="card">
           <ion-list>
-            <ion-item ng-click="ctrl.addPage('test')">Add Page</ion-item>
+            <ion-item ng-click="ctrl.openForm('Component')">Component</ion-item>
+            <ion-item ng-click="ctrl.openForm('Directive')">Directive</ion-item>
+            <ion-item ng-click="ctrl.openForm('Filter')">Filter</ion-item>
+            <ion-item ng-click="ctrl.openForm('Modal')">Modal</ion-item>
+            <ion-item ng-click="ctrl.openForm('Page')">Page</ion-item>
+            <ion-item ng-click="ctrl.openForm('Popover')">Popover</ion-item>
+            <ion-item ng-click="ctrl.openForm('Resolver')">Resolver</ion-item>
+            <ion-item ng-click="ctrl.openForm('Route')">Route</ion-item>
+            <ion-item ng-click="ctrl.openForm('Service')">Service</ion-item>
+            <ion-item ng-click="ctrl.openForm('State')">State</ion-item>
           </ion-list>
         </div>
       </div>
-      <div class="col-8">
+      <div class="col-xs-8">
         <iframe src="http://localhost:3000" border="none"></iframe>
       </div>
     </div>

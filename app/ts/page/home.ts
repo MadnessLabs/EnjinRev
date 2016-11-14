@@ -4,16 +4,48 @@ module EnjinRev {
     'use strict';
 
     class HomeController {
+        modal: any;
+        type: string;
+        addForm: any;
+
         constructor(
-            
+            protected $ionicModal,
+            protected $scope
         ) {
-            // ON LOAD       
+            // ON LOAD            
+            this.$ionicModal.fromTemplateUrl('html/modal/add.html', {
+                scope: this.$scope,
+                animation: 'slide-in-up',
+                backdropClickToClose: true
+            }).then((modal) => {
+                this.modal = modal;
+            });
+        }
+        
+        closeForm() {
+            this.modal.hide();
         }
 
-        addPage(name) {
-            ___browserSync___.socket.emit('enjin-add-page', {
-                name: name
-            });
+        add(type) {
+            var data = {};
+            if (type === 'Page') {
+                data = {
+                    name: this.addForm.name
+                }; 
+            }
+
+            this.broadcast('add-' + type.toLowerCase(), data);
+            this.closeForm();
+            this.addForm = {};
+        }
+
+        openForm(type) {
+            this.type = type;
+            this.modal.show();
+        }
+
+        broadcast(name, data) {
+            ___browserSync___.socket.emit(`enjin-${name}`, data);
         }
     }
 

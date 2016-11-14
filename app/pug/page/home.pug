@@ -1,14 +1,53 @@
 ion-view.page-home(view-title='home')
     ion-content
+        .row.padding
+            .col-xs-4
+                h2 Madness Enjin Rev
+            .col-xs-8
+                ion-item.item-input.icon-left
+                    i.icon.ion-search
+                    input(
+                        type='text'
+                        ng-model="ctrl.currentUrl"
+                    )
         .row
-            .col-4
+            .col-xs-4
+                h3 Add
                 .card
                     ion-list
                         ion-item(
-                            ng-click="ctrl.addPage('test')"
-                        ) Add Page
-            .col-8
+                            ng-click="ctrl.openForm('Component')"
+                        ) Component
+                        ion-item(
+                            ng-click="ctrl.openForm('Directive')"
+                        ) Directive
+                        ion-item(
+                            ng-click="ctrl.openForm('Filter')"
+                        ) Filter
+                        ion-item(
+                            ng-click="ctrl.openForm('Modal')"
+                        ) Modal
+                        ion-item(
+                            ng-click="ctrl.openForm('Page')"
+                        ) Page
+                        ion-item(
+                            ng-click="ctrl.openForm('Popover')"
+                        ) Popover
+                        ion-item(
+                            ng-click="ctrl.openForm('Resolver')"
+                        ) Resolver
+                        ion-item(
+                            ng-click="ctrl.openForm('Route')"
+                        ) Route
+                        ion-item(
+                            ng-click="ctrl.openForm('Service')"
+                        ) Service
+                        ion-item(
+                            ng-click="ctrl.openForm('State')"
+                        ) State
+            .col-xs-8
                 iframe(
                     src='http://localhost:3000'
                     border='none'
                 )
+                

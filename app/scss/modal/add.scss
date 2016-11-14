@@ -2,13 +2,7 @@
 @import "../variables";
 
 // PAGE STYLES
-.page-home {
-    iframe {
-        width: 100%;
-        height: calc(100vh - 100px);
-        display: block;
-        margin: 0 auto;
-    }
+.modal-add {
     @media (max-width: $screen-xl) {
 
     }
