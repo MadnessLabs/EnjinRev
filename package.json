@@ -1,6 +1,6 @@
 {
   "name": "enjinrev",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A local interface for the Madness Enjin CLI",
   "scripts": {
     "start": "gulp",
