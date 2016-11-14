@@ -1,5 +1,5 @@
 /// <reference path="../../typings/index.d.ts"/>
-declare var bs;
+declare var ___browserSync___;
 module EnjinRev {
     'use strict';
 
@@ -11,7 +11,9 @@ module EnjinRev {
         }
 
         addPage(name) {
-            bs.sockets.emit('enjin-add-page', {});
+            ___browserSync___.socket.emit('enjin-add-page', {
+                name: name
+            });
         }
     }
 
