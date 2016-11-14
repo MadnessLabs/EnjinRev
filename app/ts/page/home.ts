@@ -1,4 +1,5 @@
 /// <reference path="../../typings/index.d.ts"/>
+declare var bs;
 module EnjinRev {
     'use strict';
 
@@ -7,6 +8,10 @@ module EnjinRev {
             
         ) {
             // ON LOAD       
+        }
+
+        addPage(name) {
+            bs.sockets.emit('enjin-add-page', {});
         }
     }
 
