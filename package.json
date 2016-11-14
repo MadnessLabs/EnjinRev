@@ -3,7 +3,6 @@
   "version": "1.0.7",
   "description": "A local interface for the Madness Enjin CLI",
   "scripts": {
-    "postinstall": "gulp enjin:reinstall",
     "start": "gulp",
     "build": "gulp build"
   },

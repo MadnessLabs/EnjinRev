@@ -9,14 +9,9 @@ logs/
 .deploy
 .history
 .vscode/settings.json
-www/js/
-www/css/
-www/html/
-www/index.html
 app/typings
 /extension
 !/app/extension
-www/fonts
 app/scss/libraries.scss
 app/scss/_variables.scss
 app/ts/app.ts
