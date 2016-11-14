@@ -10,6 +10,46 @@
           <label class="input-label">Name</label>
           <input type="text" ng-model="ctrl.addForm.name" placeholder="The name of the {{ctrl.type}}"/>
         </ion-item>
+        <ion-item class="item-input item-stacked-label">
+          <label class="input-label">Attributes</label>
+          <input type="text" ng-model="ctrl.addForm.attrs" placeholder="Comma separated list of attributes"/>
+        </ion-item>
+        <ion-item class="item-input item-stacked-label">
+          <label class="input-label">Restrict</label>
+          <input type="text" ng-model="ctrl.addForm.restrict" placeholder="Restrict directive to element or attribute (Default: EA)"/>
+        </ion-item>
+        <ion-item class="item-input item-stacked-label">
+          <label class="input-label">Directory</label>
+          <input type="text" ng-model="ctrl.addForm.dir" placeholder="Directory in which to add the new {{ctrl.type}}"/>
+        </ion-item>
+        <ion-item class="item-input item-stacked-label">
+          <label class="input-label">Template Path</label>
+          <input type="text" ng-model="ctrl.addForm.template" placeholder="Path to the template you wish to use with the directive"/>
+        </ion-item>
+        <ion-item class="item-input item-stacked-label">
+          <label class="input-label">Dependencies</label>
+          <input type="text" ng-model="ctrl.addForm.dependencies" placeholder="Comma separated list of dependencies"/>
+        </ion-item>
+        <ion-item class="item-input item-stacked-label">
+          <label class="input-label">Resolves</label>
+          <input type="text" ng-model="ctrl.addForm.resolves" placeholder="Comma separated list of resolves"/>
+        </ion-item>
+        <ion-item class="item-input item-stacked-label">
+          <label class="input-label">Url</label>
+          <input type="text" ng-model="ctrl.addForm.url" placeholder="Url of the new {{ctrl.type}}"/>
+        </ion-item>
+        <ion-item class="item-input item-stacked-label">
+          <label class="input-label">Resolver</label>
+          <input type="text" ng-model="ctrl.addForm.resolver" placeholder="Resolver to use with new {{ctrl.type}}"/>
+        </ion-item>
+        <ion-item class="item-input item-stacked-label">
+          <label class="input-label">View</label>
+          <input type="text" ng-model="ctrl.addForm.view" placeholder="The name of the view"/>
+        </ion-item>
+        <ion-item class="item-input item-stacked-label">
+          <label class="input-label">Type</label>
+          <input type="text" ng-model="ctrl.addForm.type" placeholder="The type of the new {{ctrl.type}}"/>
+        </ion-item>
       </ion-list>
     </form>
   </ion-content>

@@ -51759,13 +51759,7 @@ var EnjinRev;
             this.modal.hide();
         };
         HomeController.prototype.add = function (type) {
-            var data = {};
-            if (type === 'Page') {
-                data = {
-                    name: this.addForm.name
-                };
-            }
-            this.broadcast('add-' + type.toLowerCase(), data);
+            this.broadcast('add-' + type.toLowerCase(), this.addForm);
             this.closeForm();
             this.addForm = {};
         };
