@@ -51746,7 +51746,9 @@ var EnjinRev;
         function HomeController() {
         }
         HomeController.prototype.addPage = function (name) {
-            bs.sockets.emit('enjin-add-page', {});
+            ___browserSync___.socket.emit('enjin-add-page', {
+                name: name
+            });
         };
         return HomeController;
     }());
