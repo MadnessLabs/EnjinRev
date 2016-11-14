@@ -3,11 +3,10 @@
   "version": "1.0.2",
   "description": "A local interface for the Madness Enjin CLI",
   "scripts": {
-    "postinstall": "gulp enjin:reinstall",
     "start": "gulp",
     "build": "gulp build"
   },
-  "dependencies": {
+  "dev": {
     "angularfire": "^2.1.0",
     "firebase": "^3.6.0",
     "fireenjin": "github:madnesslabs/fireenjin",

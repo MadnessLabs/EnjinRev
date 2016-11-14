@@ -10,13 +10,8 @@ logs/
 .env-app
 .history
 .vscode/settings.json
-www/js/
-www/css/
-www/html/
-www/index.html
 app/typings/globals/
 app/typings/index.d.ts
-www/fonts
 app/scss/libraries.scss
 app/scss/_variables.scss
 app/ts/app.ts
