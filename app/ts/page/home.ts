@@ -7,6 +7,8 @@ module EnjinRev {
         modal: any;
         type: string;
         addForm: any;
+        appFrame: any;
+        currentUrl: string;
 
         constructor(
             protected $ionicModal,
@@ -20,8 +22,24 @@ module EnjinRev {
             }).then((modal) => {
                 this.modal = modal;
             });
+
+            this.appFrame = document.getElementById('appFrame');
+            this.appFrame.addEventListener('load', () => {
+                this.appFrame.contentWindow.postMessage({type: 'init'}, `http://localhost:3000`);
+            });
+            
+            window.addEventListener('message', this.receiveMessage.bind(this), false);
         }
         
+        changeUrl(hash) {
+            this.appFrame.contentWindow.postMessage({type: 'url', hash: hash}, `http://localhost:3000`);
+        }
+
+        receiveMessage(event) {
+            this.currentUrl = event.data.hash;
+            this.$scope.$apply();
+        }
+
         closeForm() {
             this.modal.hide();
         }

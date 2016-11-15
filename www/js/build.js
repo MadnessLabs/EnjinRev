@@ -60289,7 +60289,19 @@ var EnjinRev;
             }).then(function (modal) {
                 _this.modal = modal;
             });
+            this.appFrame = document.getElementById('appFrame');
+            this.appFrame.addEventListener('load', function () {
+                _this.appFrame.contentWindow.postMessage({ type: 'init' }, "http://localhost:3000");
+            });
+            window.addEventListener('message', this.receiveMessage.bind(this), false);
         }
+        HomeController.prototype.changeUrl = function (hash) {
+            this.appFrame.contentWindow.postMessage({ type: 'url', hash: hash }, "http://localhost:3000");
+        };
+        HomeController.prototype.receiveMessage = function (event) {
+            this.currentUrl = event.data.hash;
+            this.$scope.$apply();
+        };
         HomeController.prototype.closeForm = function () {
             this.modal.hide();
         };

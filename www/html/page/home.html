@@ -5,11 +5,11 @@
       <div class="col-xs-4">
         <h2>Madness Enjin Rev</h2>
       </div>
-      <div class="col-xs-8">
+      <form class="col-xs-8" ng-submit="ctrl.changeUrl(ctrl.currentUrl)">
         <ion-item class="item-input icon-left"><i class="icon ion-search"></i>
-          <input type="text" ng-model="ctrl.currentUrl"/>
+          <input type="text" ng-model="ctrl.currentUrl" ng-blur="ctrl.changeUrl(ctrl.currentUrl)"/>
         </ion-item>
-      </div>
+      </form>
     </div>
     <div class="row">
       <div class="col-xs-4">
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="col-xs-8">
-        <iframe src="http://localhost:3000" border="none"></iframe>
+        <iframe id="appFrame" src="http://localhost:3000" border="none"></iframe>
       </div>
     </div>
   </ion-content>

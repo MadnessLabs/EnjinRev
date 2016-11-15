@@ -3,12 +3,13 @@ ion-view.page-home(view-title='home')
         .row.padding
             .col-xs-4
                 h2 Madness Enjin Rev
-            .col-xs-8
+            form.col-xs-8(ng-submit="ctrl.changeUrl(ctrl.currentUrl)")
                 ion-item.item-input.icon-left
                     i.icon.ion-search
                     input(
                         type='text'
                         ng-model="ctrl.currentUrl"
+                        ng-blur="ctrl.changeUrl(ctrl.currentUrl)"
                     )
         .row
             .col-xs-4
@@ -49,7 +50,7 @@ ion-view.page-home(view-title='home')
                             ng-click="ctrl.openForm('State')"
                         ) State
             .col-xs-8
-                iframe(
+                iframe#appFrame(
                     src='http://localhost:3000'
                     border='none'
                 )
