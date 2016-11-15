@@ -14,20 +14,23 @@
     "debug": true,
     "url": "http://madnessenjin.net/",
     "version": "1.0.0",
-    "routes": [{
-        "state": "home",
-        "url": "/home",
-        "templateUrl": "html/page/home.html",
-        "controller": "EnjinRev.HomeController",
-        "controllerAs": "ctrl",
-        "resolve": "HomeResolver"
-    }, {
-        "state": "login",
-        "url": "/login",
-        "templateUrl": "html/page/login.html",
-        "controller": "EnjinRev.LoginController",
-        "controllerAs": "ctrl"
-    }],
+    "routes": [
+        {
+            "state": "home",
+            "url": "/home",
+            "templateUrl": "html/page/home.html",
+            "controller": "EnjinRev.HomeController",
+            "controllerAs": "ctrl",
+            "resolve": "HomeResolver"
+        },
+        {
+            "state": "login",
+            "url": "/login",
+            "templateUrl": "html/page/login.html",
+            "controller": "EnjinRev.LoginController",
+            "controllerAs": "ctrl"
+        }
+    ],
     "plugins": [
         "ionic",
         "ngCordova",
@@ -125,6 +128,7 @@
         "file": "build.js",
         "srcDir": "app/ts/",
         "libraries": [
+            "node_modules/jquery/dist/jquery.js",
             "node_modules/ionic-sdk/release/js/ionic.bundle.js",
             "node_modules/ng-cordova/dist/ng-cordova.js",
             "node_modules/angularfire/dist/angularfire.js",

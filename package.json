@@ -23,5 +23,8 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-splashscreen",
     "ionic-plugin-keyboard"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
 }
