@@ -38,7 +38,7 @@ module EnjinRev {
         }
 
         broadcast(name, data) {
-            console.log('broadcasting...', name);
+            console.log(name, data);
             ___browserSync___.socket.emit(`enjin-${name}`, data);
         }
     }
