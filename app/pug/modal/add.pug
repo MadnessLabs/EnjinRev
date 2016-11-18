@@ -15,70 +15,77 @@ ion-modal-view.modal-add
                         ng-model='ctrl.addForm.name' 
                         placeholder='The name of the {{ctrl.type}}'
                     )
-                ion-item.item-input.item-stacked-label
+                ion-item.item-input.item-stacked-label(ng-if='ctrl.type === "Component" || ctrl.type === "Directive"')
                     label.input-label Attributes
                     input(
                         type='text' 
                         ng-model='ctrl.addForm.attrs' 
                         placeholder='Comma separated list of attributes'
                     )
-                ion-item.item-input.item-stacked-label
+                ion-item.item-input.item-stacked-label(ng-if='ctrl.type === "Component" || ctrl.type === "Directive"')
                     label.input-label Restrict
                     input(
                         type='text' 
                         ng-model='ctrl.addForm.restrict' 
                         placeholder='Restrict directive to element or attribute (Default: EA)'
                     )
-                ion-item.item-input.item-stacked-label
+                //-ion-item.item-input.item-stacked-label(ng-if='ctrl.type === "Component" || ctrl.type === "Directive"')
                     label.input-label Directory
                     input(
                         type='text' 
                         ng-model='ctrl.addForm.dir' 
                         placeholder='Directory in which to add the new {{ctrl.type}}'
                     )
-                ion-item.item-input.item-stacked-label
+                ion-item.item-input.item-stacked-label(ng-if='ctrl.type === "Route"')
                     label.input-label Template Path
                     input(
                         type='text' 
                         ng-model='ctrl.addForm.template' 
                         placeholder='Path to the template you wish to use with the directive'
                     )
-                ion-item.item-input.item-stacked-label
+                ion-item.item-input.item-stacked-label(ng-if='ctrl.type === "Controller"')
                     label.input-label Dependencies
                     input(
                         type='text' 
                         ng-model='ctrl.addForm.dependencies' 
                         placeholder='Comma separated list of dependencies'
                     )
-                ion-item.item-input.item-stacked-label
+                ion-item.item-input.item-stacked-label(ng-if='ctrl.type === "Route"')
+                    label.input-label Controller
+                    input(
+                        type='text' 
+                        ng-model='ctrl.addForm.controller' 
+                        placeholder='Name of the controller to use on the route'
+                    )   
+                ion-item.item-input.item-stacked-label(ng-if='ctrl.type === "Route" || ctrl.type === "Page" || ctrl.type === "Resolver" || ctrl.type === "State"')
                     label.input-label Resolves
                     input(
                         type='text' 
                         ng-model='ctrl.addForm.resolves' 
                         placeholder='Comma separated list of resolves'
                     )   
-                ion-item.item-input.item-stacked-label
+                ion-item.item-input.item-stacked-label(ng-if='ctrl.type === "Route"')
                     label.input-label Url
                     input(
                         type='text' 
                         ng-model='ctrl.addForm.url' 
                         placeholder='Url of the new {{ctrl.type}}'
                     )                
-                ion-item.item-input.item-stacked-label
+                ion-item.item-input.item-stacked-label(ng-if='ctrl.type === "Route"')
                     label.input-label Resolver
                     input(
                         type='text' 
                         ng-model='ctrl.addForm.resolver' 
                         placeholder='Resolver to use with new {{ctrl.type}}'
                     )   
-                ion-item.item-input.item-stacked-label
+                ion-item.item-input.item-stacked-label(ng-if='ctrl.type === "State"')
                     label.input-label View
                     input(
                         type='text' 
                         ng-model='ctrl.addForm.view' 
                         placeholder='The name of the view'
                     )   
-                ion-item.item-input.item-stacked-label
+                ion-item.item-input.item-stacked-label(ng-if='ctrl.type === "Service"')
                     label.input-label Type
                     input(
                         type='text' 
