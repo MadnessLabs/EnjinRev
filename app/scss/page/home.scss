@@ -3,6 +3,13 @@
 
 // PAGE STYLES
 .page-home {
+    h3 {
+        margin: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
     iframe {
         width: 100%;
         height: calc(100vh - 100px);

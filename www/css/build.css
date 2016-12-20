@@ -9782,6 +9782,9 @@ body {
   body:after {
     clear: both; }
 
+.pane {
+  background-color: #666; }
+
 .hide-sidebar {
   transform: none !important;
   width: auto !important; }
@@ -10443,6 +10446,13 @@ body {
     order: 9999; }
   .container {
     width: 1500px; } }
+
+.page-home h3 {
+  margin: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fff; }
 
 .page-home iframe {
   width: 100%;
