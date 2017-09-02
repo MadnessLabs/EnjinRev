@@ -2,65 +2,28 @@ ion-view.page-home(view-title='home')
     ion-content            
         .row
             .col-xs-4.col-md-2
-                h3 Madness Enjin
-                .card
-                    ion-list
-                        ion-item.item-divider Add
-                        ion-item.item-icon-right(
-                            ng-click="ctrl.openForm('Component')"
-                        ) 
-                            h2 Component
-                            i.icon.ion-android-add-circle
-                        ion-item.item-icon-right(
-                            ng-click="ctrl.openForm('Controller')"
-                        ) 
-                            h2 Controller
-                            i.icon.ion-android-add-circle
-                        ion-item.item-icon-right(
-                            ng-click="ctrl.openForm('Directive')"
-                        ) 
-                            h2 Directive
-                            i.icon.ion-android-add-circle
-                        ion-item.item-icon-right(
-                            ng-click="ctrl.openForm('Filter')"
-                        ) 
-                            h2 Filter
-                            i.icon.ion-android-add-circle
-                        ion-item.item-icon-right(
-                            ng-click="ctrl.openForm('Modal')"
-                        ) 
-                            h2 Modal
-                            i.icon.ion-android-add-circle
-                        ion-item.item-icon-right(
-                            ng-click="ctrl.openForm('Page')"
-                        ) 
-                            h2 Page
-                            i.icon.ion-android-add-circle
-                        ion-item.item-icon-right(
-                            ng-click="ctrl.openForm('Popover')"
-                        ) 
-                            h2 Popover
-                            i.icon.ion-android-add-circle
-                        ion-item.item-icon-right(
-                            ng-click="ctrl.openForm('Resolver')"
-                        ) 
-                            h2 Resolver
-                            i.icon.ion-android-add-circle
-                        ion-item.item-icon-right(
-                            ng-click="ctrl.openForm('Route')"
-                        ) 
-                            h2 Route
-                            i.icon.ion-android-add-circle
-                        ion-item.item-icon-right(
-                            ng-click="ctrl.openForm('Service')"
-                        ) 
-                            h2 Service
-                            i.icon.ion-android-add-circle
-                        ion-item.item-icon-right(
-                            ng-click="ctrl.openForm('State')"
-                        ) 
-                            h2 State
-                            i.icon.ion-android-add-circle
+                nav.card
+                    h3 Madness Enjin
+                    .tabs.tabs-icon-top
+                        a.tab-item(
+                            ui-sref='menu.add'
+                            ui-sref-active='active'
+                        )
+                            i.icon.ion-plus-circled
+                            | Add
+                        a.tab-item(
+                            ui-sref='menu.components'
+                            ui-sref-active='active'
+                        )
+                            i.icon.ion-star
+                            | Components
+                        a.tab-item(
+                            ui-sref='menu.routes'
+                            ui-sref-active='active'
+                        )
+                            i.icon.ion-map
+                            | Routes
+                div(ui-view='tab')
             .col-xs-8.col-md-10
                 form(ng-submit="ctrl.changeUrl(ctrl.currentUrl)")
                     ion-item.item-input.icon-left

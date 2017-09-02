@@ -14,23 +14,52 @@
     "debug": true,
     "url": "http://madnessenjin.net/",
     "version": "1.0.0",
-    "routes": [
-        {
-            "state": "home",
-            "url": "/home",
-            "templateUrl": "html/page/home.html",
-            "controller": "EnjinRev.HomeController",
-            "controllerAs": "ctrl",
-            "resolve": "HomeResolver"
-        },
-        {
-            "state": "login",
-            "url": "/login",
-            "templateUrl": "html/page/login.html",
-            "controller": "EnjinRev.LoginController",
-            "controllerAs": "ctrl"
+    "defaultRoute": "menu.add",
+    "routes": [{
+        "state": "menu",
+        "url": "/menu",
+        "templateUrl": "html/page/home.html",
+        "controller": "EnjinRev.HomeController",
+        "controllerAs": "ctrl",
+        "abstract": true,
+        "resolve": "HomeResolver"
+    }, {
+        "state": "login",
+        "url": "/login",
+        "templateUrl": "html/page/login.html",
+        "controller": "EnjinRev.LoginController",
+        "controllerAs": "ctrl"
+    }, {
+        "state": "menu.add",
+        "url": "/add",
+        "views": {
+            "tab": {
+                "templateUrl": "html/state/menuAdd.html",
+                "controller": "EnjinRev.MenuAddController",
+                "controllerAs": "tab"
+            }
         }
-    ],
+    }, {
+        "state": "menu.components",
+        "url": "/components",
+        "views": {
+            "tab": {
+                "templateUrl": "html/state/menuComponents.html",
+                "controller": "EnjinRev.MenuComponentsController",
+                "controllerAs": "tab"
+            }
+        }
+    }, {
+        "state": "menu.routes",
+        "url": "/routes",
+        "views": {
+            "tab": {
+                "templateUrl": "html/state/menuRoutes.html",
+                "controller": "EnjinRev.MenuRoutesController",
+                "controllerAs": "tab"
+            }
+        }
+    }],
     "plugins": [
         "ionic",
         "ngCordova",

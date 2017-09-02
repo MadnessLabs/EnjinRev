@@ -1,6 +1,6 @@
 /// <reference path="../../typings/index.d.ts"/>
 declare var ___browserSync___;
-declare var ENJIN_JSON;
+
 module EnjinRev {
     'use strict';
 
@@ -30,7 +30,6 @@ module EnjinRev {
             });
             
             window.addEventListener('message', this.receiveMessage.bind(this), false);
-            console.log(ENJIN_JSON);
         }
         
         changeUrl(hash) {

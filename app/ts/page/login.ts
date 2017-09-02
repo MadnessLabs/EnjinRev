@@ -12,7 +12,7 @@ module EnjinRev {
 
         login(type) {
             this.enjin.auth.withSocial(type, () => {
-                this.$state.go('home');
+                this.$state.go('menu.add');
             });
         }
     }

@@ -1,4 +1,5 @@
 /// <reference path="../typings/index.d.ts"/>
+declare var ENJIN_JSON;
 module EnjinRev {
     'use strict';
 
@@ -39,6 +40,8 @@ module EnjinRev {
             };
 
             Platform.run();
+
+            enjin.json = typeof ENJIN_JSON === 'object' ? ENJIN_JSON : false;
         }
     }
     angular.module('EnjinRev').run(AppRunner);

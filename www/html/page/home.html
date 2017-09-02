@@ -3,45 +3,11 @@
   <ion-content>           
     <div class="row">
       <div class="col-xs-4 col-md-2">
-        <h3>Madness Enjin</h3>
-        <div class="card">
-          <ion-list>
-            <ion-item class="item-divider">Add</ion-item>
-            <ion-item class="item-icon-right" ng-click="ctrl.openForm('Component')"> 
-              <h2>Component</h2><i class="icon ion-android-add-circle"></i>
-            </ion-item>
-            <ion-item class="item-icon-right" ng-click="ctrl.openForm('Controller')"> 
-              <h2>Controller</h2><i class="icon ion-android-add-circle"></i>
-            </ion-item>
-            <ion-item class="item-icon-right" ng-click="ctrl.openForm('Directive')"> 
-              <h2>Directive</h2><i class="icon ion-android-add-circle"></i>
-            </ion-item>
-            <ion-item class="item-icon-right" ng-click="ctrl.openForm('Filter')"> 
-              <h2>Filter</h2><i class="icon ion-android-add-circle"></i>
-            </ion-item>
-            <ion-item class="item-icon-right" ng-click="ctrl.openForm('Modal')"> 
-              <h2>Modal</h2><i class="icon ion-android-add-circle"></i>
-            </ion-item>
-            <ion-item class="item-icon-right" ng-click="ctrl.openForm('Page')"> 
-              <h2>Page</h2><i class="icon ion-android-add-circle"></i>
-            </ion-item>
-            <ion-item class="item-icon-right" ng-click="ctrl.openForm('Popover')"> 
-              <h2>Popover</h2><i class="icon ion-android-add-circle"></i>
-            </ion-item>
-            <ion-item class="item-icon-right" ng-click="ctrl.openForm('Resolver')"> 
-              <h2>Resolver</h2><i class="icon ion-android-add-circle"></i>
-            </ion-item>
-            <ion-item class="item-icon-right" ng-click="ctrl.openForm('Route')"> 
-              <h2>Route</h2><i class="icon ion-android-add-circle"></i>
-            </ion-item>
-            <ion-item class="item-icon-right" ng-click="ctrl.openForm('Service')"> 
-              <h2>Service</h2><i class="icon ion-android-add-circle"></i>
-            </ion-item>
-            <ion-item class="item-icon-right" ng-click="ctrl.openForm('State')"> 
-              <h2>State</h2><i class="icon ion-android-add-circle"></i>
-            </ion-item>
-          </ion-list>
-        </div>
+        <nav class="card">
+          <h3>Madness Enjin</h3>
+          <div class="tabs tabs-icon-top"><a class="tab-item" ui-sref="menu.add" ui-sref-active="active"><i class="icon ion-plus-circled"></i>Add</a><a class="tab-item" ui-sref="menu.components" ui-sref-active="active"><i class="icon ion-star"></i>Components</a><a class="tab-item" ui-sref="menu.routes" ui-sref-active="active"><i class="icon ion-map"></i>Routes</a></div>
+        </nav>
+        <div ui-view="tab"></div>
       </div>
       <div class="col-xs-8 col-md-10">
         <form ng-submit="ctrl.changeUrl(ctrl.currentUrl)">

@@ -3,12 +3,17 @@
 
 // PAGE STYLES
 .page-home {
-    h3 {
-        margin: 0;
-        display: block;
-        width: 100%;
-        text-align: center;
-        color: #fff;
+    nav {
+        h3 {
+            margin: 0;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .tabs {
+            position: initial;
+            border: none;
+        }
     }
     iframe {
         width: 100%;
