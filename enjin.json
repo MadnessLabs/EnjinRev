@@ -1,6 +1,6 @@
 {
     "name": "EnjinRev",
-    "type": "madnessionic",
+    "stack": "madnessionic",
     "description": "The build process used by Madness Labs to build Ionic hybrid apps",
     "author": {
         "name": "Madness Labs",

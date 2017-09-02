@@ -2,18 +2,18 @@
 // REQUIRED LIBRARIES
 fs           = require('fs');
 gulp         = require('gulp');
-env          = JSON.parse(fs.readFileSync('.env'));
-startEnjin   = require(env.enjinPath + '/app/enjin/' + env.type);
+env          = JSON.parse(fs.readFileSync('enjin.local.json'));
+startEnjin   = require(env.enjinPath + 'app/enjin/' + env.stack);
 
  /////////////////////////////////////
 // ON LOAD
 startEnjin();
-taskDir = configJSON.taskDir ? process.cwd() + '/' + configJSON.taskDir : process.cwd() + '/tasks';
+taskDir = process.cwd() + '/' + configJSON.taskDir ? configJSON.taskDir : 'tasks';
 
  /////////////////////////////////////
 // TASKS
 require('gulp-require-tasks')({
-    path: env.enjinPath + 'app/enjin/' + env.type + '/tasks',
+    path: env.enjinPath + 'app/enjin/' + env.stack + '/tasks',
     gulp: gulp
 });
 
